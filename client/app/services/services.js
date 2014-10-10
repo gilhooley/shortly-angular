@@ -4,13 +4,17 @@ angular.module('shortly.services', [])
   var getLinks = function(){
     return $http({
       method: 'GET',
-      url: '/links',
-      data: links
+      url: '/api/links',
+      // data: links
     })
-    .then(function(resp){
-      return resp.data.links;
+    .then(function (resp) {
+      console.log(resp);
     });
-  }
+  };
+
+  return {
+    getLinks: getLinks
+  };
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
