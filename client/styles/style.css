@@ -113,10 +113,9 @@ input[type=url]:focus {
   outline: none;
 }
 
-
-.error {
-  border: red solid 4px;
-  padding: 10px;
+.ng-invalid.ng-dirty {
+  border: red solid 2px;
+  padding: 3px;
   margin: 0 10px;
 }
 

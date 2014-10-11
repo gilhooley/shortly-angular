@@ -5,18 +5,22 @@ angular.module('shortly.services', [])
     return $http({
       method: 'GET',
       url: '/api/links',
+      // 'Content-Type': 'application/json'
     })
     .then(function (resp) {
       return resp.data;
     });
   };
 
-  var addLink = function(){
+  var addLink = function(link){
     return $http({
       method: 'POST',
       url: '/api/links',
+      data: link,
+      'Content-Type': 'application/x-www-form-urlencoded'
     })
     .then(function (resp) {
+      // console.log("RESPONSE DATA: ", resp.data);
       return resp.data;
     })
   };

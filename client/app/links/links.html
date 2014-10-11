@@ -1,5 +1,15 @@
 <div id='container' ng-controller="LinksController">
-
+  <h1>links</h1>
+<!--   <form name="getLinksForm" ng-submit='getLinks()'>
+    <input type='text' ng-model='user.username'>
+    <input type="password" ng-model='user.password'>
+    <button>signup</button>
+  </form> -->
+  <button ng-click="getLinks()">show links</button>
+  <div ng-repeat="link in $scope.data.links">
+    <li></li>
+  </div>
+  <a href="/#/shorten">Switch to <strong>shorten view</strong></a>
 
 
 </div>
