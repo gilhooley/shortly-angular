@@ -1,9 +1,8 @@
 <div id="container" ng-controller="ShortenController">
   <h1>shorten a link</h1>
-  <form novalidate name="addLinkForm" ng-submit="addLink()">
+  <form novalidate name="addLinkForm" ng-submit="addLink(link)">
     <input name="url" type="text" ng-model="link.url" required>
     <p ng-show="addLinkForm.url.$error.required">URL is required.</p>
     <button ng-disabled="addLinkForm.$invalid">shorten</button>
   </form>
-  <a href="/#/links">Switch to <strong>links view</strong></a>
 </div>

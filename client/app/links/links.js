@@ -12,6 +12,9 @@ angular.module('shortly.links', [])
       .catch(function(error){
         console.error(error);
       })
+    console.log('getting links: ', $scope.data.links);
+
   };
   $scope.getLinks();
+
 });

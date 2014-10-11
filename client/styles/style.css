@@ -1,6 +1,5 @@
 body {
-  margin: 0;
-  margin-top: 10px;
+  margin: 0 10px 0 10px;
   font-family: arial, sans-serif;
 }
 
@@ -8,6 +7,7 @@ a {
   color: #333;
   font-size: 14px;
   text-decoration: none;
+  font-family: monospace, sans-serif;
 }
 
 h1 {

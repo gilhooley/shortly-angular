@@ -5,7 +5,6 @@ angular.module('shortly.services', [])
     return $http({
       method: 'GET',
       url: '/api/links',
-      // 'Content-Type': 'application/json'
     })
     .then(function (resp) {
       return resp.data;
@@ -13,16 +12,16 @@ angular.module('shortly.services', [])
   };
 
   var addLink = function(link){
+    // console.log(link);
     return $http({
       method: 'POST',
       url: '/api/links',
       data: link,
-      'Content-Type': 'application/x-www-form-urlencoded'
     })
-    .then(function (resp) {
-      // console.log("RESPONSE DATA: ", resp.data);
-      return resp.data;
-    })
+    // .then(function (resp) {
+    //   console.log("RESPONSE DATA: ", resp.data);
+    //   return resp.data;
+    // })
   };
 
   return {
@@ -42,7 +41,7 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/users/signin',
-      data: user
+      data: user,
     })
     .then(function (resp) {
       return resp.data.token;
@@ -50,10 +49,11 @@ angular.module('shortly.services', [])
   };
 
   var signup = function (user) {
+    console.log(user);
     return $http({
       method: 'POST',
       url: '/api/users/signup',
-      data: user
+      data: user,
     })
     .then(function (resp) {
       return resp.data.token;

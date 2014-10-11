@@ -17,11 +17,19 @@ angular.module('shortly', [
     })
     .when('/links', {
       templateUrl: 'app/links/links.html',
-      controller: 'LinksController'
+      controller: 'LinksController',
+      authenticate: true,
+      
+      // resolve: {
+      //   links: function(Links){
+      //     return Links.getLinks();
+      //   }
+      // }
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
-      controller: 'ShortenController'
+      controller: 'ShortenController',
+      authenticate: true,
     })
     .otherwise({
       redirectTo: '/links'

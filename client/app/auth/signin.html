@@ -5,7 +5,7 @@
     <p ng-show="signinForm.username.$error.minlength">Username is too short.</p>
     <input type="password" name ="password" ng-model='user.password' ng-minlength="6">
     <p ng-show="signinForm.password.$error.minlength">Password is too short.</p>
-    <button >signup</button> 
+    <button ng-disabled="signinForm.$invalid">sign in</button> 
   </form>
   <a href="/#/signup">Don't have an account? <strong>Sign up</strong>.</a>
 </div>
