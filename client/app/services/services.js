@@ -5,7 +5,6 @@ angular.module('shortly.services', [])
     return $http({
       method: 'GET',
       url: '/api/links',
-      // data: links
     })
     .then(function (resp) {
       return resp.data;
@@ -16,7 +15,6 @@ angular.module('shortly.services', [])
     return $http({
       method: 'POST',
       url: '/api/links',
-      // data: link
     })
     .then(function (resp) {
       return resp.data;

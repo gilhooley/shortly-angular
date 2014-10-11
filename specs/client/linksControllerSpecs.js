@@ -22,21 +22,22 @@ describe('LinksController', function () {
         Links: Links
       });
     };
+    createController();
   }));
 
   it('should have a data property on the $scope', function() {
-    createController();
+    // createController();
     expect($scope.data).to.be.an('object');
   });
 
   it('should have a getLinks method on the $scope', function () {
-    createController();
+    // createController();
     expect($scope.getLinks).to.be.a('function');
   });
   it('should call getLinks() when controller is loaded', function () {
     var mockLinks = [{},{},{}];
     $httpBackend.expectGET("/api/links").respond(mockLinks);
-    createController();
+    // createController();
     $httpBackend.flush();
     expect($scope.data.links).to.eql(mockLinks);
   });
