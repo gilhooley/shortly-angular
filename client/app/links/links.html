@@ -1,9 +1,12 @@
 <div id='container' ng-controller="LinksController">
   <h1>links</h1>
   <input type='text' ng-model='search' placeholder='filter' />
+  <!-- <paper-input label="Your Name"></paper-input> -->
+  <paper-input ng-model='search' placeholder='filter'></paper-input>
+
   <div class="container" ng-repeat="link in data.links | filter: search | orderBy: 'link.visits' : reverse">
     <li class="link title">{{link.title}}
-      <a href="http://localhost:8000/api/links/{{link.code}}" ng-click="addVisit()"><img src="../assets/redirect_icon.png"/></a>
+      <a href="http://localhost:8000/api/links/{{link.code}}" ng-click="addVisit()" class="link original"><paper-button role="button" tabindex="0">GO GO GO</paper-button></a>
       <p class="visits count">Visits: {{link.visits}}</p>
       <p class="link">{{link.base_url}}/api/links/{{link.code}}</p>
     </li>

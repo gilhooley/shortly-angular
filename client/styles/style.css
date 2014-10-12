@@ -68,6 +68,10 @@ h1 {
   float: left;
   margin: 0 5px;
 }
+.link paper {
+  float: left;
+  margin: 0 5px;
+}
 
 .link .visits {
   float: right;
