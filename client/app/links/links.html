@@ -1,6 +1,11 @@
 <div id='container' ng-controller="LinksController">
   <h1>links</h1>
-  <div ng-repeat="link in $data.links">
-    <li>{{link.data}}</li>
+  <input type='text' ng-model='search' placeholder='filter' />
+  <div class="container" ng-repeat="link in data.links | filter: search | orderBy: 'link.visits' : reverse">
+    <li class="link title">{{link.title}}
+      <a href="http://localhost:8000/api/links/{{link.code}}" ng-click="addVisit()"><img src="../assets/redirect_icon.png"/></a>
+      <p class="visits count">Visits: {{link.visits}}</p>
+      <p class="link">{{link.base_url}}/api/links/{{link.code}}</p>
+    </li>
   </div>
 </div>

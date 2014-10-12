@@ -12,9 +12,11 @@ angular.module('shortly.links', [])
       .catch(function(error){
         console.error(error);
       })
-    console.log('getting links: ', $scope.data.links);
-
   };
   $scope.getLinks();
 
+  $scope.addVisit = function(){
+    console.log('adding a visit to: ', $scope.data.links.visits);
+    return $scope.data.links.visits++;
+  };
 });
